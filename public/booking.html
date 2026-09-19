@@ -7,11 +7,9 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-     <header>
+    <header>
       <nav class="navbar">
-        <div class="logo">
-          <a href="index.html">M-Cubed</a>
-        </div>
+        <div class="logo">M-Cubed</div>
 
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
@@ -24,124 +22,124 @@
     </header>
 
     <main>
-      <section class="page-hero">
-        <p>PLAN YOUR EXPERIENCE</p>
-        <h1>Make a Reservation</h1>
-
-        <p>Reserve your accommodation or VIP table at M-Cubed.</p>
-      </section>
-
-      <section class="booking-section">
-        <div class="section-heading">
-          <p>ACCOMMODATION</p>
-          <h2>Book a Room</h2>
-        </div>
-
-        <form id="roomBookingForm">
-          <div class="form-group">
-            <label for="roomName">Full Name</label>
-
-            <input type="text" id="roomName" name="name" required />
+      <section class="form-section">
+        <div class="container">
+          <div class="section-title">
+            <h2>Accommodation Booking</h2>
+            <h1>Reserve your stay at M-Cubed.</h1>
           </div>
 
-          <div class="form-group">
-            <label for="roomEmail">Email Address</label>
+          <div class="form-container">
+            <form id="roomBookingForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="roomName">Full Name</label>
 
-            <input type="email" id="roomEmail" name="email" required />
-          </div>
+                  <input type="text" id="roomName" name="name" />
+                </div>
 
-          <div class="form-group">
-            <label for="roomName">Phone Number</label>
+                <div class="form-group">
+                  <label for="roomEmail">Email Address</label>
 
-            <input type="tel" id="roomPhone" name="phone" required />
-          </div>
+                  <input type="email" id="roomEmail" name="email" />
+                </div>
+              </div>
 
-          <div class="form-group">
-            <label for="roomType">Room Type</label>
+              <div class="form-group">
+                <label for="roomName">Phone Number</label>
 
-            <select id="roomType" name="roomType" required>
-              <option value="">Select a room</option>
-              <option value="deluxe">Deluxe Room</option>
-              <option value="executive">Executive Room</option>
-              <option value="suite">Suite</option>
-            </select>
-          </div>
+                <input type="tel" id="roomPhone" name="phone" />
+              </div>
 
-          <div class="form-row">
-            <div class="form-group">
+              <div class="form-group">
+                <label for="roomType">Room Type</label>
+
+                <select id="roomType" name="roomType" required>
+                  <option value="">Select a room</option>
+                  <option value="deluxe">Deluxe Room</option>
+                  <option value="executive">Executive Room</option>
+                  <option value="suite">Suite</option>
+                </select>
+              </div>
+
+              <div class="form-group">
                 <label for="checkIn"> Check-in</label>
                 <input type="date" id="checkIn" name="checkIn" required />
-            </div>
+              </div>
 
-          <div class="form-row">
-            <div class="form-group">
+              <div class="form-group">
                 <label for="checkOut"> Check-out</label>
                 <input type="date" id="checkOut" name="checkOut" required />
-            </div>
-          </div>
+              </div>
 
-            <div class="form-group">
+              <div class="form-group">
                 <label for="guests">Number of guests</label>
-                <input type="number" id="guests" name="guests" min="1" required />
-            </div>
-          <button type="submit">Submit Room Booking</button>
-        </form>
+                <input type="number" id="guests" name="guests" min="1" />
+              </div>
+              <button type="submit">Submit Room Booking</button>
+            </form>
+          </div>
+        </div>
       </section>
 
-      <section class="booking-section">
-        <div class="section-heading">
-            <p>NIGHTLIFE</p>
-            <h2>Reserve a VIP Table</h2>
+      <section class="form-section">
+        <div class="container">
+          <div class="section-title">
+            <h2>NIGHTLIFE</h2>
+            <p>Reserve a VIP Table</p>
+          </div>
+
+          <div class="form-container">
+            <form id="tableBookingForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="tableName">Full Name</label>
+
+                  <input type="text" id="tableName" name="name" />
+                </div>
+
+                <div class="form-group">
+                  <label for="tableName">Email Address</label>
+
+                  <input type="email" id="tableName" name="email" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="tablePhone">Phone Number</label>
+
+                <input type="tel" id="tablePhone" name="phone" />
+              </div>
+
+              <div class="form-group">
+                <label for="tableDate">Reservation Date</label>
+
+                <input type="date" id="tableDate" name="date" />
+              </div>
+
+              <div class="form-group">
+                <label for="tableGuests">Number of Guests</label>
+
+                <input type="number" id="tableGuests" name="guests" min="1" />
+              </div>
+
+              <div class="form-group">
+                <label for="tableMessage">Additional Information</label>
+
+                <textarea id="tableMessage" name="message" rows="5"></textarea>
+              </div>
+
+              <button type="submit">Submit VIP Reservation</button>
+            </form>
+          </div>
         </div>
-
-        <form id="tableBookingForm">
-          <div class="form-group">
-            <label for="tableName">Full Name</label>
-
-            <input type="text" id="tableName" name="name" required />
-          </div>
-
-          <div class="form-group">
-            <label for="tableName">Email Address</label>
-
-            <input type="email" id="tableName" name="email" required />
-          </div>
-
-          <div class="form-group">
-            <label for="tablePhone">Phone Number</label>
-
-            <input type="tel" id="tablePhone" name="phone" required />
-          </div>
-
-          <div class="form-group">
-            <label for="tableDate">Reservation Date</label>
-
-            <input type="date" id="tableDate" name="date" required />
-          </div>
-
-          <div class="form-group">
-            <label for="tableGuests">Number of Guests</label>
-
-            <input type="number" id="tableGuests" name="guests" min="1" required />
-          </div>
-
-          <div class="form-group">
-            <label for="tableMessage">Additional Information</label>
-
-            <textArea id="tableMessage" name="message" rows="5"></textArea>
-          </div>
-
-          <button type="submit">Submit VIP Reservation</button>
-
-        </form>
-    </section>
+      </section>
     </main>
 
     <footer>
-        <h3>M-Cubed</h3>
-        <p>Lounge & Accommodation</p>
-        <p>&copy; 2026 M-Cubed Lounge & Accommodation. All rights reserved.</p>
+      <h3>M-Cubed</h3>
+      <p>Lounge & Accommodation</p>
+      <p>&copy; 2026 M-Cubed Lounge & Accommodation. All rights reserved.</p>
     </footer>
-
   </body>
 </html>
