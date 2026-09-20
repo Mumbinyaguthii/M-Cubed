@@ -121,6 +121,11 @@ header {
   cursor: pointer;
 }
 
+button.btn {
+  border: none;
+  font-family: inherit;
+}
+
 .btn-primary {
   background-color: #d4af37;
   color: #000;
@@ -177,6 +182,12 @@ section {
   max-width: 850px;
   margin: 0 auto;
   text-align: center;
+}
+
+.about-content h4 {
+  color: #d4af37;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
 }
 
 .about-content h2 {
@@ -377,14 +388,29 @@ footer {
   text-align: center;
 }
 
+footer h3 {
+  margin-bottom: 5px;
+}
+
 footer p {
   color: #888;
   font-size: 0.9rem;
 }
 
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 15px 0;
+}
+
+.footer-links a {
+  color: #aaa;
+  transition: 0.3s;
+}
+
 .footer-links a:hover {
   color: #d4af37;
-  gap: 25px;
 }
 
 /* RESPONSIVE DESIGN */
@@ -403,6 +429,11 @@ footer p {
 
   .hero {
     min-height: 60vh;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
   }
 
   .highlight-grid {
