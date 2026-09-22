@@ -380,6 +380,12 @@ section {
   color: #888;
 }
 
+.error-message {
+  color: #ff6b6b;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
 /* FOOTER */
 footer {
   background-color: #000;
