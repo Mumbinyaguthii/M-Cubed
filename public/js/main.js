@@ -100,58 +100,113 @@ if (roomBookingForm) {
   const checkIn = document.querySelector("#checkIn");
   const checkOut = document.querySelector("#checkOut");
   const guests = document.querySelector("#guests");
+
+  roomBookingForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    console.log("room booking form submitted");
+
+    const name = roomName.value.trim();
+    const email = roomEmail.value.trim();
+    const phone = roomPhone.value.trim();
+    const selectedRoom = roomType.value;
+    const arrivalDate = checkIn.value;
+    const departureDate = checkOut.value;
+    const numberOfGuests = guests.value;
+
+    if (name === "") {
+      alert("Please enter your full name.");
+      return;
+    }
+
+    if (email === "") {
+      alert("Please enter your email address.");
+      return;
+    }
+
+    if (phone === "") {
+      alert("Please enter your phone number.");
+      return;
+    }
+
+    if (selectedRoom === "") {
+      alert("Please select a room.");
+      return;
+    }
+
+    if (arrivalDate === "") {
+      alert("Please select your check-in date.");
+      return;
+    }
+
+    if (departureDate === "") {
+      alert("Please select your check-out date.");
+      return;
+    }
+
+    if (numberOfGuests === "" || Number(numberOfGuests) < 1) {
+      alert("Please enter a valid number of guests.");
+      return;
+    }
+
+    if (departureDate <= arrivalDate) {
+      alert("Check-out must be after check-in.");
+      return;
+    }
+
+    alert("Room booking details are valid");
+  });
 }
 
-roomBookingForm.addEventListener("submit", function (event) {
-  event.preventDefault();
+const tableBookingForm = document.querySelector("#tableBookingForm");
 
-  const name = roomName.value.trim();
-  const email = roomEmail.value.trim();
-  const phone = roomPhone.value.trim();
-  const selectedRoom = romTypr.value;
-  const arrivalDate = checkIn.value;
-  const departureDate = checkOut.value;
-  const numberOfGuests = guests.value;
+if (tableBookingForm) {
+  const tableName = document.querySelector("#tableName");
+  const tableEmail = document.querySelector("#tableEmail");
+  const tablePhone = document.querySelector("#tablePhone");
+  const tableDate = document.querySelector("#tableDate");
+  const tableGuests = document.querySelector("#tableGuests");
+  const tableMessage = document.querySelector("#tableMessage");
 
-  if (name === "") {
-    alert("Please enter your full name.");
-    return;
-  }
+  tableBookingForm.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-  if (email === "") {
-    alert("Please enter your email address.");
-    return;
-  }
+    const name = tableName.value.trim();
+    const email = tableEmail.value.trim();
+    const phone = tablePhone.value.trim();
+    const reservationDate = tableDate.value;
+    const numberOfGuests = tableGuests.value;
+    const additionalMessage = tableMessage.value.trim();
 
-  if (phone === "") {
-    alert("Please enter your phone number.");
-    return;
-  }
+    if (name === "") {
+      alert("Please enter your full name.");
+      return;
+    }
 
-  if (selectedRoom === "") {
-    alert("Please select a room.");
-    return;
-  }
+    if (email === "") {
+      alert("Please enter your email address.");
+      return;
+    }
 
-  if (arrivalDate === "") {
-    alert("Please select your check-in date.");
-    return;
-  }
+    if (phone === "") {
+      alert("Please enter your phone number.");
+      return;
+    }
 
-  if (departureDate === "") {
-    alert("Please select your check-out date.");
-    return;
-  }
+    if (reservationDate === "") {
+      alert("Please select a reservation date.");
+      return;
+    }
 
-  if (numberOfGuests === "" || Number(numberOfGuests) < 1) {
-    alert("Please enter a valid number of guests.");
-    return;
-  }
+    if (numberOfGuests === "" || Number(numberOfGuests) < 1) {
+      alert("Please enter a valid number of guests.");
+      return;
+    }
 
-  if (departureDate <= arrivalDate) {
-    alert("Check-out must be after check-in.");
-    return;
-  }
+    if (additionalMessage === "") {
+      alert("Please add aditional information.");
+      return;
+    }
 
-  alert("Room booking details are valid");
-});
+    alert("VIP reservation details are valid.");
+  });
+}
